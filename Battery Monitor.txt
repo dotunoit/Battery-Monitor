@@ -1,0 +1,9 @@
+In this project, we use the psutil library to retrieve battery information. We check if the battery is currently plugged in (battery.power_plugged) and the battery percentage (battery.percent).
+
+If the battery is plugged in and the percentage is equal to 100, it sends a notification indicating that the battery is fully charged and suggests unplugging the charger.
+
+If the battery is not plugged in and the percentage is equal to or below 20, it sends a notification indicating that the battery is below 20% and suggests connecting the charger.
+
+The notification module from the plyer library is used to display the notifications. Make sure you have the psutil and plyer libraries installed before running the program (pip install psutil plyer).
+
+Please note that this project uses the psutil.wait_services function to periodically check the battery status every 60 seconds. This allows the program to run continuously and monitor the battery.
